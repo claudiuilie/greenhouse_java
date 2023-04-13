@@ -20,7 +20,7 @@ public class GreenhouseApplication {
         final Console console = new Console();
         Context pi4j = Pi4J.newAutoContext();
 
-        int dataPinNum = 4;
+		int dataPinNum = 0xff;
         String traceLevel = "info";
         console.title("<-- The Pi4J V2 Project Extension  -->", "DHT22_App");
         String helpString = " parms:  -d  data GPIO number  -t trace " +
