@@ -1,5 +1,5 @@
 import Adafruit_DHT
-from gpiozero import DigitalInputDevice
+from gpiozero import InputDevice
 import json
 
 # Set sensor type : Options are DHT11,DHT22 or AM2302
@@ -13,7 +13,7 @@ for pin in range(2, 28):
     device = None
     try:
         # Attempt to read the data from the DHT22 sensor on this pin
-        device = DigitalInputDevice(pin, pull_up_down=None)
+        device = InputDevice(pin, pull_up=False)
         humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
         # If data was successfully read, append it to the sensor_data list
