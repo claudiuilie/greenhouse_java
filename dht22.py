@@ -10,6 +10,7 @@ sensor_data = []
 
 # Iterate over each pin on the Raspberry Pi
 for pin in range(2, 28):
+    device = None
     try:
         # Attempt to read the data from the DHT22 sensor on this pin
         device = DigitalInputDevice(pin)
