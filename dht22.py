@@ -13,7 +13,7 @@ for pin in range(2, 28):
     device = None
     try:
         # Attempt to read the data from the DHT22 sensor on this pin
-        device = DigitalInputDevice(pin)
+        device = DigitalInputDevice(pin, pull_up_down=None)
         humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
         # If data was successfully read, append it to the sensor_data list
